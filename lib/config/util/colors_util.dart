@@ -7,3 +7,6 @@ const textColor = Color(0xff1E232C);
 const formBorderColor = Color(0xffE8ECF4);
 const formFilledColor = Color(0xffF7F8F9);
 const formTextColor = Color(0xff8391A1);
+
+const itemBackgroundColor = Color(0xffEFEEED);
+const itemBorderColor = Color(0xffF4F3F1);

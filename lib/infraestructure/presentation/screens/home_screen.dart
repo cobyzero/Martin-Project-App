@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:martin_project_app/config/util/colors_util.dart';
-import 'package:martin_project_app/config/widgets/render_banner.dart';
-import 'package:martin_project_app/config/widgets/render_input.dart';
+
 import 'package:martin_project_app/config/widgets/render_scroll_banner.dart';
 import 'package:martin_project_app/config/widgets/render_scroll_category.dart';
 import 'package:martin_project_app/config/widgets/render_scroll_products.dart';
 import 'package:martin_project_app/config/widgets/render_search.dart';
 import 'package:martin_project_app/config/widgets/render_windows.dart';
+import 'package:martin_project_app/domain/models/product_model.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,6 +24,23 @@ class HomeScreen extends StatelessWidget {
     "Hogar",
   ];
 
+  static List<ProductModel> products = [
+    ProductModel(
+      "Soporte 12x32 mm",
+      "assets/item_1.jpg",
+      234.99,
+    ),
+    ProductModel(
+      "Mesa 145x42 mm",
+      "assets/item_2.jpg",
+      56.99,
+    ),
+    ProductModel(
+      "Pistones 50x50 mm",
+      "assets/item_3.jpg",
+      567.99,
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return RenderWindows(
@@ -31,6 +48,22 @@ class HomeScreen extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset(
+                  "assets/icono.png",
+                  width: 60,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.logout),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
                 const Flexible(child: RenderSearch()),
@@ -53,7 +86,7 @@ class HomeScreen extends StatelessWidget {
               categorys: categorys,
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             //
             Row(
@@ -77,7 +110,37 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
 
-            RenderScrollProducts()
+            RenderScrollProducts(
+              products: products,
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            //
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Text(
+                    "Recientemente actualizados",
+                    style: TextStyle(
+                      color: textColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text("Ver más"),
+                )
+              ],
+            ),
+
+            RenderScrollProducts(
+              products: products,
+            )
           ],
         ),
       ),
