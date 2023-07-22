@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:martin_project_app/config/assets/assets.dart';
 import 'package:martin_project_app/config/util/colors_util.dart';
 import 'package:martin_project_app/config/widgets/render_button.dart';
 import 'package:martin_project_app/config/widgets/render_input.dart';
 import 'package:martin_project_app/config/widgets/render_separator.dart';
+import 'package:martin_project_app/config/widgets/render_social_button.dart';
 import 'package:martin_project_app/config/widgets/render_windows.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -16,7 +18,6 @@ class LoginScreen extends StatelessWidget {
       child: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //
               Row(
@@ -72,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                   //
                   RenderButton(
                     text: "Ingresar",
-                    onPressed: () {},
+                    onPressed: () => context.go("/home"),
                   ),
                   //
                   const SizedBox(
@@ -87,18 +88,9 @@ class LoginScreen extends StatelessWidget {
                     height: 20,
                   ),
                   //
-                  InkWell(
-                    borderRadius: BorderRadius.circular(20),
+                  RenderSocialButton(
                     onTap: () {},
-                    child: Container(
-                      width: 120,
-                      height: 80,
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          border: Border.all(color: formBorderColor, width: 2),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset("assets/google.png"),
-                    ),
+                    image: socialGoogle,
                   )
                 ],
               ),
@@ -110,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   const Text("No tienes una cuenta?"),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => context.go("/register"),
                     child: const Text("Registrate ahora"),
                   )
                 ],
