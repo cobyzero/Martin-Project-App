@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:martin_project_app/config/util/colors_util.dart';
-import 'package:martin_project_app/config/widgets/render_banner.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
 
 class RenderScrollBanner extends StatefulWidget {

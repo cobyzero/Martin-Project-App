@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:martin_project_app/config/util/colors_util.dart';
 
 import 'package:martin_project_app/config/widgets/render_scroll_banner.dart';
@@ -41,6 +42,7 @@ class HomeScreen extends StatelessWidget {
       567.99,
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return RenderWindows(
@@ -56,12 +58,12 @@ class HomeScreen extends StatelessWidget {
                   width: 60,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () => context.go("/main"),
                   icon: const Icon(Icons.logout),
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -73,18 +75,22 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+            //
             const SizedBox(
               height: 20,
             ),
             RenderScrollBanner(
               images: images,
             ),
+            //
             const SizedBox(
               height: 30,
             ),
+            //
             RenderScrollCategory(
               categorys: categorys,
             ),
+            //
             const SizedBox(
               height: 10,
             ),
@@ -109,11 +115,12 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-
+            //
             RenderScrollProducts(
               products: products,
             ),
-            SizedBox(
+            //
+            const SizedBox(
               height: 15,
             ),
             //
@@ -137,7 +144,7 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-
+            //
             RenderScrollProducts(
               products: products,
             )

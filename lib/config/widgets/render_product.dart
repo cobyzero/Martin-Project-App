@@ -18,9 +18,9 @@ class RenderProduct extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-          color: itemBackgroundColor,
+          color: formFilledColor,
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(width: 1, color: itemBorderColor)),
+          border: Border.all(width: 1, color: formBorderColor)),
       padding: const EdgeInsets.all(10),
       width: 200,
       child: Column(
@@ -43,7 +43,7 @@ class RenderProduct extends StatelessWidget {
                 alignment: Alignment.center,
                 height: 26,
                 width: 94,
-                margin: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(5.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
