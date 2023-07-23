@@ -46,6 +46,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RenderWindows(
+      //drawer: const Drawer(child: RenderDrawer()),
       padding: 20.0,
       child: SingleChildScrollView(
         child: Column(
@@ -53,9 +54,14 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset(
-                  "assets/icono.png",
-                  width: 60,
+                Row(
+                  children: [
+                    const DrawerButton(),
+                    Image.asset(
+                      "assets/icono.png",
+                      width: 60,
+                    ),
+                  ],
                 ),
                 IconButton(
                   onPressed: () => context.go("/main"),

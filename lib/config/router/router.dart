@@ -1,7 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:martin_project_app/infraestructure/presentation/screens/cart_screen.dart';
 import 'package:martin_project_app/infraestructure/presentation/screens/home_screen.dart';
 import 'package:martin_project_app/infraestructure/presentation/screens/login_screen.dart';
 import 'package:martin_project_app/infraestructure/presentation/screens/main_screen.dart';
+import 'package:martin_project_app/infraestructure/presentation/screens/page_view.dart';
 import 'package:martin_project_app/infraestructure/presentation/screens/register_screen.dart';
 
 GoRouter goRouter = GoRouter(
@@ -21,7 +24,7 @@ GoRouter goRouter = GoRouter(
     ),
     GoRoute(
       path: "/home",
-      builder: (context, state) => HomeScreen(),
-    )
+      builder: (context, state) => const PageViewScreen(),
+    ),
   ],
 );
