@@ -15,16 +15,18 @@ class RenderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(40)),
-        backgroundColor: color,
-        fixedSize: Size(MediaQuery.of(context).size.width, 60),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(fontSize: 20, color: Colors.white),
+    return Expanded(
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(40)),
+          backgroundColor: color,
+          fixedSize: const Size(double.infinity, 60),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(fontSize: 20, color: Colors.white),
+        ),
       ),
     );
   }

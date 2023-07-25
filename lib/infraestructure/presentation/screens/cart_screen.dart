@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:martin_project_app/config/util/colors_util.dart';
 import 'package:martin_project_app/config/widgets/render_button.dart';
 import 'package:martin_project_app/config/widgets/render_cart_item.dart';
 
@@ -14,13 +13,11 @@ class CartScreen extends StatelessWidget {
         padding: 20.0,
         child: Column(
           children: [
-            Row(
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.arrow_back_ios),
-                ),
-                const Text(
+                Icon(Icons.shopping_cart),
+                Text(
                   "Carrito",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 )
@@ -46,9 +43,12 @@ class CartScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: RenderButton(
-                      text: "Finalizar compra",
-                      onPressed: () {},
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: RenderButton(
+                        text: "Finalizar compra",
+                        onPressed: () {},
+                      ),
                     ),
                   )
                 ],
