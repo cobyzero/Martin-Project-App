@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:martin_project_app/config/util/colors_util.dart';
-import 'package:martin_project_app/config/widgets/render_button.dart';
-import 'package:martin_project_app/config/widgets/render_input.dart';
-import 'package:martin_project_app/config/widgets/render_windows.dart';
+import 'package:martin_project_app/infraestructure/presentation/util/colors_util.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_button.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_input.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_windows.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});

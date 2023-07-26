@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:martin_project_app/config/util/colors_util.dart';
+import 'package:martin_project_app/infraestructure/presentation/util/colors_util.dart';
 
-import 'package:martin_project_app/config/widgets/render_scroll_banner.dart';
-import 'package:martin_project_app/config/widgets/render_scroll_category.dart';
-import 'package:martin_project_app/config/widgets/render_scroll_products.dart';
-import 'package:martin_project_app/config/widgets/render_search.dart';
-import 'package:martin_project_app/config/widgets/render_windows.dart';
-import 'package:martin_project_app/domain/models/product_model.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_scroll_banner.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_scroll_category.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_scroll_products.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_search.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_windows.dart';
+import 'package:martin_project_app/domain/entitys/product_model.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

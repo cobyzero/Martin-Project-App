@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:martin_project_app/config/util/colors_util.dart';
-import 'package:martin_project_app/config/widgets/render_button.dart';
-import 'package:martin_project_app/config/widgets/render_count_products.dart';
-import 'package:martin_project_app/config/widgets/render_windows.dart';
+import 'package:martin_project_app/infraestructure/presentation/util/colors_util.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_button.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_count_products.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_windows.dart';
 
 int _cantProduct = 0;
 

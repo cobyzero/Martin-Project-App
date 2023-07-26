@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:martin_project_app/infraestructure/dependecy_injection/service_locator.dart';
 import 'package:martin_project_app/config/router/router.dart';
 import 'package:martin_project_app/config/theme/theme.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  ServiceLocator.init();
+  runApp(const MyApp());
+}
 
 class AppState extends StatelessWidget {
   const AppState({super.key});

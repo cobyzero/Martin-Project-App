@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:martin_project_app/config/widgets/render_button.dart';
-import 'package:martin_project_app/config/widgets/render_cart_item.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_button.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_cart_item.dart';
 
-import 'package:martin_project_app/config/widgets/render_windows.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_windows.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});

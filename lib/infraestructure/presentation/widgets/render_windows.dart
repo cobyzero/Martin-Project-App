@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:martin_project_app/config/util/colors_util.dart';
+import 'package:martin_project_app/infraestructure/presentation/util/colors_util.dart';
 
 class RenderWindows extends StatelessWidget {
   const RenderWindows({

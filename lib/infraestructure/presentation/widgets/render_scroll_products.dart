@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:martin_project_app/config/widgets/render_product.dart';
-import 'package:martin_project_app/domain/models/product_model.dart';
+import 'package:martin_project_app/infraestructure/presentation/widgets/render_product.dart';
+import 'package:martin_project_app/domain/entitys/product_model.dart';
 
 class RenderScrollProducts extends StatelessWidget {
   const RenderScrollProducts({
